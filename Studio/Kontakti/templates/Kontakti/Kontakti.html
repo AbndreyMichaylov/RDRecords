@@ -1,0 +1,107 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Заголовок страницы</title>
+    <meta name="keywords" content="Ключевые слова, и, фразы, через, запятую">
+    <meta name="description" content="Описание контента страницы, 1-2 предложения.">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/styleKo.css' %}" type="text/css"/>
+</head>
+<body>
+  <script  src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+  <script src="{% static 'js\scriptsKo.js '%}"> </script>
+  <script src="{% static 'jquery-color-master\jquery.color.js '%}"> </script>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="mainpage"><img src="{% static 'photos/sun.png' %}" width="200" height="80" alt="logo"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a href="Onas" class="nav-link n onas">О нас</a>
+        </li>
+        <li class="nav-item active">
+          <a href="Uslugi" class="nav-link n uslugi">Услуги</a>
+        </li>
+        <li class="nav-item active">
+          <a href="Kontakti" class="nav-link n kontakti">Контакты</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+<div class="fonimg" style="background-image: url({% static 'photos/kakdob.jpg'%} );">
+</div>
+
+<div class="Onas" style=" height: 100px; width: 100%;">
+  <h2 style="text-align: center; padding: 20px; margin-top: 15px; padding: 20px; border-top: 1px solid black; border-bottom: 1px solid black;">Контакты RDRecords</h2>
+</div>
+
+
+<div class="map" style="border-top: 7px solid white; box-shadow: 0 0 4px;">
+  <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A32e2718ba4bf2cc62d8e833c489f4b6ffb49ff2cb800b1fa6ba033f4398ebf07&amp;width=100%&amp;height=400&amp;lang=ru_RU&amp;scroll=false"></script>
+</div>
+
+<div class="content" style="width: 100%; height: 500px;">
+  <div class="container">
+    <h2 style="padding-top: 20px; padding-bottom: 20px;">Форма обратной связи</h2>
+    <div class="row">
+      <div class="col-md-6">
+        <form method="post">
+
+          {% csrf_token %}
+
+          {{ form }}
+
+          <button type="submit" style="margin-top: 20px;" class="submit">Заказат звонок</button>
+        </form>
+      </div>
+      <div class="col-md-6">
+        <p style="padding-left: 12px;">Если у вас появились вопросы или вы хотите получить консультацию по любым вопросам, мы с
+           радостью ответим на них. Заполните форму обратной связи и мы свяжемся!</p>
+        <p style="padding-left: 12px;"> Для того, чтобы забронировать смену на студии, Вам необходимо связаться с нами и заранее договориться о дате и времени, если
+          по каким либо причинам у вас не получается приехать в назначенное время, обязательно свяжитесь и сообщите об этом!
+         Обратите вниманиме, в поле "Ваше сообщение", вы можете заранее указать что вас интересует, в этом же поле вы можете оставить
+       дополнительные контактные данные если такие имеются, ждем ваше сообщения!</p>
+       <p style="padding-left: 12px; line-height: 0.7;"><img src="{% static 'photos/addr.jpg'%}" height="20" width="20">Адрес: ул. Багрицкого дом 5</p>
+       <p style="padding-left: 12px; line-height: 0.7;"><img src="{% static 'photos/poch.jpg'%}" height="20" width="20">Почта: rdrecords.sound@gmail.com</p>
+       <p style="padding-left: 12px; line-height: 0.7;"><img src="{% static 'photos/phone.png'%}" height="20" width="20">Телефон: 7(977)924-98-94</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="footeri">
+    <div class="row">
+      <div class="col-md-1">
+      </div>
+      <div class="col-md-4"  style="margin-top: 20px;">
+        <h3>RDRecords</h3>
+        <p>Профессиональная студия звукозаписи RDRecords в Москве — это команда специалистов, в сфере аудио и видео производства имеющаюя богатый опыт работы с клиентами. Мы — команда профессионалов нового поколения, работающая в сфере музыки и PR. Найдём подход к любому клиенту и к любой задаче, поможем, проконсультируем и сделаем, ведь самое главное для нас — достижение цели, поставленной клиентом. </p>
+      </div>
+      <div class="col-md-1">
+      </div>
+      <div class="col-md-3"  style="margin-top: 20px;">
+        <h3>Услуги</h3>
+        <p>Написание минусовки</p>
+        <p>Запись трека</p>
+        <p>Запись инструментала</p>
+      </div>
+      <div class="col-md-3" style="margin-top: 20px;">
+        <h3>Контакты</h3>
+        <p>Адрес: ул. Багрицкого дом 5</p>
+        <p>Почта: rdrecords.sound@gmail.com</p>
+        <p>Телефон: 7(977)924-98-94</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>

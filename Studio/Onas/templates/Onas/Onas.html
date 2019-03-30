@@ -1,0 +1,118 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Заголовок страницы</title>
+    <meta name="keywords" content="Ключевые слова, и, фразы, через, запятую">
+    <meta name="description" content="Описание контента страницы, 1-2 предложения.">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/styleOn.css' %}" type="text/css"/>
+</head>
+<body>
+  <script  src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+  <script src="{% static 'js\scriptsOn.js '%}"> </script>
+  <script src="{% static 'jquery-color-master\jquery.color.js '%}"> </script>
+
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="mainpage"><img src="{% static 'photos/sun.png' %}" width="200" height="80" alt="logo"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a href="Onas" class="nav-link n onas">О нас</a>
+        </li>
+        <li class="nav-item active">
+          <a href="Uslugi" class="nav-link n uslugi">Услуги</a>
+        </li>
+        <li class="nav-item active">
+          <a href="Kontakti" class="nav-link n kontakti">Контакты</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+<div class="image" style="background-image: url({% static 'photos/fon.jpg'%} );">
+</div>
+
+<div class="onastxt" style="text-align: center;">
+  <h2 style="margin-top: 15px; padding: 20px; border-top: 1px solid black; border-bottom: 1px solid black;">О RDRecords</h2>
+  <div class="container">
+   <div class="row">
+     <div class="col-md-5">
+       <img src="{% static 'photos\RDRecords.jpg'%}" height="400" width="400" style="margin: 20px;" float="right" class="RDimg">
+     </div>
+     <div class="col-md-7" style="font-size: 14pt; padding: 30px;  font-style: italic;">
+       <p>RDRecords - молодая студия звукозаписи, с отличным уровнем предоствляемых услуг в медиа-сфере. Попадая в RDRecords вы будете окружены настоящими
+      профессионалами, людьми, четко знающими своего дела, умеющими работать с современных оборудованием и программных обеспечением.
+      Мы предлагаем вам широкий спектр услуг, нужных для ваших работ, таких как: запись, сведение, написание минуса, добавление аранжировки
+      отснятие клипа и все связанные с этим услуги, и многое другое! Почему же стоит выбрать нас? Имея такое колличество услуг, мы предлагаем
+      их вам, по цене в разы меньше чем другие студии, у нас вы получите качественный продукт, ничем не отличающийся от работ других студий, за
+      действительно адекватную цену, а наша комманда превратит работу в студии в уютную посиделку. Выбирайте RDRecords, выбирайте качество!
+      </p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-5">
+      <h1 style="padding: 20px;">Наше оборудование</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-11">
+      <h5 style="font-style: italic; padding-bottom: 30px;">В нашей студии используется современное и мощное оборудование, а так же программное обеспечение.</h5>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4" style="text-align: left;">
+      <ul style="font-size: 14pt; padding: 5px; line-height: 2;">
+        <li>Аудиосистема: Edifier sound pro</li>
+        <li>Звуковая карта: Focusrite skarlett solo</li>
+        <li>Микрофон: Audio Technica AT2020</li>
+        <li>Наушники активные: AKG K52</li>
+        <li>Программа: FLStudio 20</li>
+        <li>Программа: Ableton Pro</li>
+        <li>Программа: Cubase 9</li>
+        <li style="padding-bottom: 20px;">Акустика: 80% рабочей зоны</li>
+      </ul>
+    </div>
+  </div>
+ </div>
+</div>
+
+
+
+<div class="footeri">
+  <div class="row">
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-4"  style="margin-top: 20px;">
+      <h3>RDRecords</h3>
+      <p>Профессиональная студия звукозаписи RDRecords в Москве — это команда специалистов, в сфере аудио и видео производства имеющаюя богатый опыт работы с клиентами. Мы — команда профессионалов нового поколения, работающая в сфере музыки и PR. Найдём подход к любому клиенту и к любой задаче, поможем, проконсультируем и сделаем, ведь самое главное для нас — достижение цели, поставленной клиентом. </p>
+    </div>
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-3"  style="margin-top: 20px;">
+      <h3>Услуги</h3>
+      <p>Написание минусовки</p>
+      <p>Запись трека</p>
+      <p>Запись инструментала</p>
+    </div>
+    <div class="col-md-3" style="margin-top: 20px;">
+      <h3>Контакты</h3>
+      <p>Адрес: ул. Багрицкого дом 5</p>
+      <p>Почта: rdrecords.sound@gmail.com</p>
+      <p>Телефон: 7(977)924-98-94</p>
+    </div>
+  </div>
+</div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
