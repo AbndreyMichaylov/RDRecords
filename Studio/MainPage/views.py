@@ -4,7 +4,7 @@ import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 # Create your views here.
-def sendMsg(clientName, clientEmail, clientText):
+def sendMsg(clientName, clientEmail):
     login = 'clientSender@yandex.ru'
     password = 'KARTON432'
     url = 'smtp.yandex.ru'
@@ -13,7 +13,7 @@ def sendMsg(clientName, clientEmail, clientText):
     message = MIMEMultipart()
     message['Subject'] = 'Новый клиент ждет звонка!'
     message['From'] = 'clientSender@yandex.ru'
-    body = 'Клиент "' + str(clientName) + '" с данной почтой "' + str(clientEmail) + '" говорит: ' + str(clientText)
+    body = 'Клиент "' + str(clientName) + '" с данной почтой "' + str(clientEmail) + '" ждет звонка!'
     message.attach(MIMEText(body, 'plain'))
 
     server = smtplib.SMTP_SSL(url, 465)
@@ -32,9 +32,8 @@ def Printsait(request):
 
             name = form.cleaned_data['name']
             email = form.cleaned_data['email']
-            textarea = form.cleaned_data['textarea']
-            print(name, email, textarea)
-            sendMsg(name, email, textarea)
+            print(name, email)
+            sendMsg(name, email)
 
 
     print(request.path)
