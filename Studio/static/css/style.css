@@ -17,8 +17,8 @@ nav {
 }
 
 .carousel{
-  margin-bottom: 40px;
-  margin-top: 30px;
+  margin-bottom: 3%;
+  margin-top: 3%;
 }
 
 .onasopis {
@@ -68,21 +68,16 @@ nav {
 
 
 input {
-  width: 550px;
-  height: 34px;
+  width: 343%;
+  height: 43px;
   box-shadow: 0 0 1px;
 }
 
-textarea {
-  width: 550px;
-  height: 120px;
-  box-shadow: 0 0 1px;
-}
 
 .submit {
   margin-top: 15px;
-  width: 550px;
-  height: 40px;
+  width: 343%;
+  height: 43px;
   background-color: #a8f3ff;
 }
 

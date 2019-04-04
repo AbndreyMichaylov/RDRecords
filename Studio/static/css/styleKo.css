@@ -87,3 +87,14 @@ textarea {
 html {
   overflow-x: hidden;
 }
+
+@media display and (min-width: 1000px){
+  .for {
+    position: relative;
+    float: left;
+  }
+  .txt {
+    position: relative;
+    float: left;
+  }
+}
